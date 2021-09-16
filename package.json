@@ -1,0 +1,17 @@
+{
+  "name": "koa-api",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "koa": "^2.13.1"
+  },
+  "scripts": {
+    "dev": "tsc -w",
+    "start": "node dist/index.js"
+  },
+  "devDependencies": {
+    "@types/koa": "^2.13.4",
+    "@types/node": "^16.9.1"
+  }
+}
