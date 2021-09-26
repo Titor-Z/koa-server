@@ -1,12 +1,12 @@
-import Application from "koa"
+import Application from "koa";
+import { Env } from "../extend/env.util";
 
-const server = new Application()
+const server = new Application();
 
 server.use(async (ctx) => {
-  ctx.body = "123213123213"
-  console.log(ctx.body)
-})
+  ctx.body = "Hello World!";
+});
 
-server.listen(3000, () => {
-  console.log("server is running...")
-})
+server.listen(new Env().get('port'), () => {
+  console.log("server is running...");
+});
