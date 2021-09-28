@@ -1,5 +1,5 @@
 import Application from "koa";
-import { Env } from "../extend/env.util";
+import { Env } from "../extend/Env";
 
 const server = new Application();
 
