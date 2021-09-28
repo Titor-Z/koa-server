@@ -1,4 +1,4 @@
-#! /usr/local/bin/node
-import { Engine } from "./extend/engine";
+#!/usr/bin/env node
+import { Generator } from "./extend/Generator";
 
-new Engine();
+new Generator();
