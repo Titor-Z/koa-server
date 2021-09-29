@@ -1,12 +1,30 @@
 import Application from "koa";
 import { Env } from "../extend/Env";
+import { Route } from "./router/route";
 
-const server = new Application();
+class App {
+  private server: Application;
+  private env: Env;
 
-server.use(async (ctx) => {
-  ctx.body = "Hello World!";
-});
+  constructor() {
+    this.server = new Application();
+    this.env = new Env();
 
-server.listen(new Env().get('port'), () => {
-  console.log("server is running...");
-});
+    this.use();
+    this.start();
+  }
+
+  private use() {
+    this.server.use(new Route().on());
+  }
+
+  private start() {
+    this.server.listen(this.env.get("port"), () => {
+      console.log(
+        `server is running on the port of the ${this.env.get("port")}...`
+      );
+    });
+  }
+}
+
+new App();

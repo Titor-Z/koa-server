@@ -66,7 +66,7 @@ export class Engine {
           {
             Method: this.method.toUpperCase(),
             URL: this.url,
-            Content: http.body,
+            Content: JSON.parse(http.body),
           },
         ]);
         break;
