@@ -16,6 +16,7 @@
     "prettier": "^2.4.1"
   },
   "scripts": {
+    "init": "pnpm install && tsc",
     "dev": "tsc -w",
     "start-dev": "yarn nodemon dist/app/index.js",
     "start": "node dist/app/index.js",
